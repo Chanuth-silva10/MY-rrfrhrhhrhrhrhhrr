@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Service
@@ -29,12 +30,17 @@ public class OrderService {
         if (isProductInStock) {
             Order order = new Order();
             order.setOrderNumber(UUID.randomUUID().toString());
-            order.setPrice(orderRequest.price());
+            order.setPrice(orderRequest.price().multiply(BigDecimal.valueOf(orderRequest.quantity())));
             order.setSkuCode(orderRequest.skuCode());
             order.setQuantity(orderRequest.quantity());
             orderRepository.save(order);
 
-            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(),orderRequest.userDetails().email());
+            // Send the message to Kafka Topic
+            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent();
+            orderPlacedEvent.setOrderNumber(order.getOrderNumber());
+            orderPlacedEvent.setEmail(orderRequest.userDetails().email());
+//            orderPlacedEvent.setFirstName(orderRequest.userDetails().firstName());
+//            orderPlacedEvent.setLastName(orderRequest.userDetails().lastName());
             log.info("Start - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
             kafkaTemplate.send("order-placed", orderPlacedEvent);
             log.info("End - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
