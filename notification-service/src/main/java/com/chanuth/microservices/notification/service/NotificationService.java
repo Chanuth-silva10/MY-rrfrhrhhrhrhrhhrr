@@ -24,7 +24,7 @@ public class NotificationService {
         MimeMessagePreparator messagePreparator = mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
             messageHelper.setFrom("chanuth@gmail.com");
-            messageHelper.setTo(orderPlacedEvent.getEmail());
+            messageHelper.setTo(orderPlacedEvent.getEmail().toString());
             messageHelper.setSubject(String.format("Your Order with OrderNumber %s is placed successfully", orderPlacedEvent.getOrderNumber()));
             messageHelper.setText(String.format("""
                             Hi
@@ -32,7 +32,7 @@ public class NotificationService {
                             Your order with order number %s is now placed successfully.
                             
                             Best Regards
-                            Spring Shop
+                            CMS Shop
                             """,
                     orderPlacedEvent.getOrderNumber()));
         };
