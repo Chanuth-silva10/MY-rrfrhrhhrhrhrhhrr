@@ -28,6 +28,9 @@ The technologies used in this project are:
 ## Application Architecture
 ![image](https://github.com/user-attachments/assets/d4ef38bd-8ae5-4cc7-9ac5-7a8e5ec3c969)
 
+## Grafana Dashoard
+![Grafana Dashboard for each service](https://github.com/user-attachments/assets/35d47fb2-7145-4eff-8529-1d8d1eba9f1b)
+
 ## How to run the frontend application
 
 Make sure you have the following installed on your machine:
