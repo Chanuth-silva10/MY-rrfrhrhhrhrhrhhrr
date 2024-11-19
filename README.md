@@ -31,6 +31,33 @@ The technologies used in this project are:
 ## Grafana Dashoard
 ![Grafana Dashboard for each service](https://github.com/user-attachments/assets/35d47fb2-7145-4eff-8529-1d8d1eba9f1b)
 
+## Add Product UI
+![Add Product UI](https://github.com/user-attachments/assets/2cd8d544-24e2-4639-a2dd-275b9ff37146)
+
+## Place Order UI
+![Place Order UI](https://github.com/user-attachments/assets/22c19800-cce1-4d1b-84ba-34a4971a9eb7)
+
+## API Gateway Service with Prometheus
+![api gateway service with promethues](https://github.com/user-attachments/assets/9377b146-6b4d-4723-b0f3-071e09feec5c)
+
+## API Gateway with Loki
+![api gateway with loki](https://github.com/user-attachments/assets/7c5d6cd2-dde2-4bf3-85ef-63207d259aac)
+
+## Check Email
+![Check Email](https://github.com/user-attachments/assets/b724f0c7-ed7f-446f-805c-dd8c3140036f)
+
+## Kafka Consumer
+![Kafka Consumer](https://github.com/user-attachments/assets/c9b276e6-422b-4cac-a869-6f8899111b2d)
+
+## Kafka Sending message
+![Kafka Sending message](https://github.com/user-attachments/assets/8b8fc9fe-b34e-4be5-8311-d75b2087ab3e)
+
+## Kafka Topic
+![Kafka Topic](https://github.com/user-attachments/assets/eb99299a-4382-44b6-b5eb-d021dc4644f5)
+
+## Microservice Docker Containers
+![Microservice Docker Containers](https://github.com/user-attachments/assets/a99b85c7-5313-4b08-a453-92a45daf777b)
+
 ## How to run the frontend application
 
 Make sure you have the following installed on your machine:
